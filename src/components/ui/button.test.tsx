@@ -14,7 +14,7 @@ describe('Button', () => {
         render(<Button onClick={handleClick}>Click me</Button>)
         const button = screen.getByRole('button', { name: /click me/i })
         fireEvent.click(button)
-        expect(handleClick).toHaveBeenCalledTimes(0)
+        expect(handleClick).toHaveBeenCalledTimes(1)
     })
 
     it('applies variant classes correctly', () => {
